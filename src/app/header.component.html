@@ -1,0 +1,34 @@
+
+        <div class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" [routerLink]="['/']">Recipe Book</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li routerLinkActive="active"><a [routerLink]="['/recipes']">Recipes</a></li>
+                        <li routerLinkActive="active"><a [routerLink]="['/shopping-list']">Shopping List</a></li>
+                    </ul> 
+                    <ul class="nav navbar-nav navbar-right">
+                    	<li class="dropdown" userDropdown>
+                    		<a class="dropdown-toggle" 
+                                role="button"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                data-toggle="dropdown">Recipe Management <span class="caret"></span></a>
+                    		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                    			<li><a (click)="onStore()" style="cursor: pointer;">Store Recipes</a></li>
+                    			<li role="separator" class="divider"></li>
+                    			<li><a (click)="onFetch()" style="cursor: pointer;">Retrieve Recipes</a></li>
+                    		</ul>
+                    	</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
